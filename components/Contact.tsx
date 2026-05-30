@@ -1,5 +1,6 @@
 import { profile } from "@/data/profile";
-import { GitHubIcon, LinkedInIcon, MailIcon, ArrowUpRight } from "./icons";
+import { GitHubIcon, LinkedInIcon, MailIcon } from "./icons";
+import { ResumeMenu } from "./ResumeMenu";
 
 export function Contact() {
   const showLinkedIn = !profile.linkedin.startsWith("FROM MASTER");
@@ -48,13 +49,7 @@ export function Contact() {
                 LinkedIn
               </a>
             )}
-            <a
-              href={profile.resumeUrl}
-              className="inline-flex items-center gap-2 rounded-full border bg-[var(--color-surface)] px-5 py-2.5 text-sm font-medium text-[var(--color-ink)] transition-colors hover:bg-[var(--color-raise)]"
-            >
-              <ArrowUpRight width={16} height={16} />
-              Resume
-            </a>
+            <ResumeMenu />
           </div>
         </div>
       </div>

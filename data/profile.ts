@@ -39,6 +39,12 @@ export const profile = {
   githubHandle: "ian52n",
   linkedin: "https://www.linkedin.com/in/ian-norris1",
   resumeUrl: "/Ian-Norris-iOS-Resume.pdf",
+  /** Track-specific resumes, ordered by priority (iOS first). */
+  resumes: [
+    { label: "iOS", track: "ios", file: "/Ian-Norris-iOS-Resume.pdf" },
+    { label: "Full-Stack", track: "fullstack", file: "/Ian-Norris-FullStack-Resume.pdf" },
+    { label: "Data Science", track: "data", file: "/Ian-Norris-DataScientist-Resume.pdf" },
+  ],
 
   // --- Bio -----------------------------------------------------------------
   summary:
