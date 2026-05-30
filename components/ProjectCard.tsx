@@ -1,5 +1,5 @@
 import type { Project } from "@/data/projects";
-import { GitHubIcon, ArrowUpRight } from "./icons";
+import { GitHubIcon, ArrowUpRight, StarIcon } from "./icons";
 
 const trackLabel: Record<string, string> = {
   ios: "iOS",
@@ -7,7 +7,13 @@ const trackLabel: Record<string, string> = {
   data: "Data Science",
 };
 
-export function ProjectCard({ project }: { project: Project }) {
+export function ProjectCard({
+  project,
+  stars,
+}: {
+  project: Project;
+  stars?: number;
+}) {
   return (
     <article className="group flex h-full flex-col rounded-2xl border bg-[var(--color-surface)] p-6 transition-all duration-300 hover:border-[var(--color-accent)]/40 hover:shadow-[0_8px_30px_-12px_rgba(0,0,0,0.18)]">
       <div className="mb-3 flex items-start justify-between gap-3">
@@ -82,6 +88,18 @@ export function ProjectCard({ project }: { project: Project }) {
           >
             <ArrowUpRight width={16} height={16} />
             Live
+          </a>
+        )}
+        {typeof stars === "number" && stars > 0 && (
+          <a
+            href={`${project.repoUrl}/stargazers`}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`${stars} GitHub ${stars === 1 ? "star" : "stars"}`}
+            className="ml-auto inline-flex items-center gap-1.5 text-sm font-medium text-[var(--color-muted)] transition-colors hover:text-[var(--color-accent)]"
+          >
+            <StarIcon className="text-amber-500" />
+            {stars}
           </a>
         )}
       </div>

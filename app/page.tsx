@@ -8,8 +8,11 @@ import { Skills } from "@/components/Skills";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
 import { profile } from "@/data/profile";
+import { getRepoStars } from "@/lib/github";
 
-export default function Home() {
+export default async function Home() {
+  const stars = await getRepoStars();
+
   // Structured data so recruiters' tools / search engines understand the page.
   const jsonLd = {
     "@context": "https://schema.org",
@@ -38,7 +41,7 @@ export default function Home() {
           <Tracks />
         </div>
         <div id="work" className="scroll-mt-20 py-20 sm:py-24">
-          <Projects />
+          <Projects stars={stars} />
         </div>
         <About />
         <Skills />
