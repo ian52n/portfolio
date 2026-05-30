@@ -14,7 +14,7 @@ const filters: { id: Filter; label: string }[] = [
   { id: "data", label: "Data Science" },
 ];
 
-export function Projects({ stars }: { stars?: Record<string, number> }) {
+export function Projects() {
   const [active, setActive] = useState<Filter>("all");
 
   const shown = useMemo(() => {
@@ -71,7 +71,7 @@ export function Projects({ stars }: { stars?: Record<string, number> }) {
 
       <div className="grid gap-5 sm:grid-cols-2">
         {shown.map((p) => (
-          <ProjectCard key={p.id} project={p} stars={stars?.[p.id]} />
+          <ProjectCard key={p.id} project={p} />
         ))}
       </div>
     </div>
