@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { profile } from "@/data/profile";
 import { experience, education } from "@/data/experience";
 import { Section } from "./Section";
@@ -8,6 +9,26 @@ export function About() {
       <div className="grid gap-12 lg:grid-cols-[1.1fr_1fr]">
         {/* Summary */}
         <div className="text-base leading-relaxed text-[var(--color-ink-soft)]">
+          <div className="mb-6 flex items-center gap-5">
+            <div className="relative h-24 w-24 shrink-0 overflow-hidden rounded-2xl ring-1 ring-[var(--color-line)] sm:h-28 sm:w-28">
+              <Image
+                src="/headshot.jpg"
+                alt={profile.name}
+                fill
+                sizes="112px"
+                className="object-cover"
+                priority
+              />
+            </div>
+            <div>
+              <p className="text-lg font-semibold text-[var(--color-ink)]">
+                {profile.name}
+              </p>
+              <p className="text-sm text-[var(--color-muted)]">
+                {profile.title} · {profile.location}
+              </p>
+            </div>
+          </div>
           <p>{profile.summary}</p>
 
           <dl className="mt-8 grid grid-cols-2 gap-x-6 gap-y-4 text-sm">

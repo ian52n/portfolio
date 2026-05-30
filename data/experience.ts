@@ -23,7 +23,7 @@ export const experience: ExperienceItem[] = [
     location: "Remote",
     period: "2025 – Present",
     bullets: [
-      "Designed, built, and shipped AI Photo Editor (iOS) to the App Store as sole engineer in under three months — 500+ users, zero crash rate, sub-6s cold start.",
+      "Designed, built, and shipped AI Photo Editor (iOS) to the App Store as sole engineer in under three months — 800+ users, zero crash rate, sub-6s cold start.",
       "Building a peer-to-peer VPN with a native Android (Kotlin) client and Go backend services.",
     ],
   },

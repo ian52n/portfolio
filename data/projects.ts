@@ -27,7 +27,7 @@ export const projects: Project[] = [
     name: "Trace",
     tagline: "An AI-native travel app for runners — runs as destinations, not routes.",
     description:
-      "A cross-platform (iOS + Android) app where every entry is a run with a story. A curated, Atlas Obscura-voice feed of iconic and hidden runs worldwide, plus a 'generate me a local run' feature: drop a pin, pick a distance and a vibe, and a Cloudflare Worker stitches a real walking loop through nearby POIs (Google Places + Directions) and has Claude write it up.",
+      "An app where every entry is a run with a story — a curated, Atlas Obscura-voice feed of iconic and hidden runs worldwide, plus a 'generate me a local run' feature: drop a pin, pick a distance and a vibe, and a Cloudflare Worker stitches a real walking loop through nearby POIs (Google Places + Directions) and has Claude write it up. I built it in two stacks: a native SwiftUI version and a cross-platform React Native (Expo) version running on iOS and Android — both implementing the same product spec.",
     tracks: ["ios", "fullstack", "data"],
     tech: [
       "Swift",
@@ -40,8 +40,8 @@ export const projects: Project[] = [
       "Google Maps APIs",
     ],
     highlights: [
-      "Built first in SwiftUI, then rebuilt as one React Native codebase running natively on iOS and Android",
-      "Server-side generation pipeline keeps API keys off-device and produces identical results on both platforms",
+      "Built in two frameworks from one product spec — native SwiftUI for iOS, and React Native (Expo) running natively across iOS and Android",
+      "Server-side generation pipeline keeps API keys off-device and produces identical results on every platform",
       "Local-first state: bundled JSON for curated runs, AsyncStorage for saved + generated runs — no accounts, no server state",
     ],
     repoUrl: "https://github.com/ian52n/trace",
@@ -53,11 +53,11 @@ export const projects: Project[] = [
     name: "AI Photo Editor",
     tagline: "A generative-AI photo editor, shipped solo to the App Store.",
     description:
-      "An iOS app for editing photos with generative AI — built as the founding product of AI Editor LLC. I took it from concept to App Store publication as sole engineer in under three months. It now has 500+ users and a zero crash rate across every production release.",
+      "An iOS app for editing photos with generative AI — built as the founding product of AI Editor LLC. I took it from concept to App Store publication as sole engineer in under three months. It now has 800+ users and a zero crash rate across every production release.",
     tracks: ["ios"],
     tech: ["Swift", "SwiftUI", "Swift Concurrency", "DeepAI API", "On-device ML", "CI/CD"],
     highlights: [
-      "500+ users · zero crash rate · sub-6s cold start · ≤500 MB peak memory",
+      "800+ users · zero crash rate · sub-6s cold start · ≤500 MB peak memory",
       "Offline-first with on-device image processing and caching; AI features via the DeepAI API",
       "Profiled and fixed performance bottlenecks with Xcode Instruments; full unit + UI test suite and an App Store CI/CD pipeline",
     ],
