@@ -30,6 +30,8 @@ export interface Project {
   highlights: string[];
   repoUrl: string;
   liveUrl?: string;
+  /** Private repos show a non-clickable "Private repo" indicator (no 404 link). */
+  isPrivate?: boolean;
   /** Optional screenshots / demo video. */
   media?: ProjectMedia;
   /** Featured projects render larger / first. */
@@ -96,6 +98,7 @@ export const projects: Project[] = [
     ],
     repoUrl: "https://github.com/ian52n/ai_photo_editing",
     liveUrl: "https://ai-editor.app",
+    isPrivate: true,
     media: {
       poster: "/media/ai-photo/02-edit-prompt.jpg",
       label: "7 screenshots",
@@ -143,6 +146,7 @@ export const projects: Project[] = [
       "Clean-architecture backend with a minimal, maintainable test suite",
     ],
     repoUrl: "https://github.com/ian52n/user-group",
+    isPrivate: true,
     media: {
       poster: "/media/user-group/ug-overview.png",
       label: "3 screenshots",
@@ -168,6 +172,7 @@ export const projects: Project[] = [
       "Containerized with docker-compose for a one-command local stack",
     ],
     repoUrl: "https://github.com/ian52n/todo-ai-model",
+    isPrivate: true,
     period: "2025",
   },
   {
@@ -183,6 +188,7 @@ export const projects: Project[] = [
       "Verified end-to-end: HTTPS browsing and DNS resolution work through the peer tunnel",
     ],
     repoUrl: "https://github.com/ian52n/vpn-frontend",
+    isPrivate: true,
     period: "2026",
   },
 ];

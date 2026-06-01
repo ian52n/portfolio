@@ -1,5 +1,5 @@
 import type { Project } from "@/data/projects";
-import { GitHubIcon, ArrowUpRight } from "./icons";
+import { GitHubIcon, ArrowUpRight, LockIcon } from "./icons";
 import { MediaViewer } from "./MediaViewer";
 
 const trackLabel: Record<string, string> = {
@@ -66,15 +66,25 @@ export function ProjectCard({ project }: { project: Project }) {
       </div>
 
       <div className="mt-6 flex items-center gap-4 border-t pt-4">
-        <a
-          href={project.repoUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-1.5 text-sm font-medium text-[var(--color-ink)] transition-colors hover:text-[var(--color-accent)]"
-        >
-          <GitHubIcon width={16} height={16} />
-          Code
-        </a>
+        {project.isPrivate ? (
+          <span
+            className="inline-flex items-center gap-1.5 text-sm font-medium text-[var(--color-muted)]"
+            title="Source code is in a private repository"
+          >
+            <LockIcon width={15} height={15} />
+            Private repo
+          </span>
+        ) : (
+          <a
+            href={project.repoUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 text-sm font-medium text-[var(--color-ink)] transition-colors hover:text-[var(--color-accent)]"
+          >
+            <GitHubIcon width={16} height={16} />
+            Code
+          </a>
+        )}
         {project.liveUrl && (
           <a
             href={project.liveUrl}
