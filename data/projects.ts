@@ -64,14 +64,14 @@ export const projects: Project[] = [
     repoUrl: "https://github.com/ian52n/trace",
     media: {
       poster: "/media/trace/demo-poster.jpg",
-      label: "Watch 30s demo",
+      label: "Watch demo",
       aspect: "portrait",
       slides: [
         {
           type: "video",
           src: "/media/trace/demo.mp4",
           poster: "/media/trace/demo-poster.jpg",
-          caption: "30-second demo — discover, generate, and run.",
+          caption: "Product demo — discover a run, generate one from a pin, and read the result.",
         },
         { type: "image", src: "/media/trace/discover.jpg", caption: "The curated atlas of runs." },
         { type: "image", src: "/media/trace/generate.jpg", caption: "Drop a pin, pick a distance and a vibe." },
@@ -145,6 +145,16 @@ export const projects: Project[] = [
       "Clean-architecture backend with a minimal, maintainable test suite",
     ],
     repoUrl: "https://github.com/ian52n/user-group",
+    media: {
+      poster: "/media/user-group/ug-overview.png",
+      label: "3 screenshots",
+      aspect: "landscape",
+      slides: [
+        { type: "image", src: "/media/user-group/ug-overview.png", caption: "Group list with permissions and custom attributes, searchable and paginated." },
+        { type: "image", src: "/media/user-group/ug-permissions.png", caption: "Granular read / write / delete / execute permissions per group." },
+        { type: "image", src: "/media/user-group/ug-attributes.png", caption: "Configurable custom attributes per group." },
+      ],
+    },
     period: "2025",
   },
   {

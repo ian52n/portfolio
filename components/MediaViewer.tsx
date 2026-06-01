@@ -121,14 +121,15 @@ export function MediaViewer({ media, title }: { media: ProjectMedia; title: stri
                   className="max-h-[78vh] w-auto rounded-lg shadow-2xl"
                 />
               ) : (
-                <Image
+                // Plain img: slides vary in aspect ratio (portrait phone shots
+                // and small landscape web shots), and these JP/PNGs are already
+                // optimized — object-contain + max-* never upscales past native.
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
                   key={slide.src}
                   src={slide.src}
                   alt={slide.caption ?? `${title} screenshot ${index + 1}`}
-                  width={1320}
-                  height={2868}
-                  sizes="(max-width: 640px) 90vw, 520px"
-                  className="max-h-[78vh] w-auto rounded-lg object-contain shadow-2xl"
+                  className="max-h-[78vh] w-auto max-w-full rounded-lg object-contain shadow-2xl"
                 />
               )}
             </div>
