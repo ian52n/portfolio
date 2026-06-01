@@ -6,7 +6,7 @@ export function Tracks() {
   return (
     <div className="mx-auto w-full max-w-5xl px-6">
       <div className="grid gap-px overflow-hidden rounded-2xl border bg-[var(--color-line)] sm:grid-cols-3">
-        {tracks.map((t, i) => {
+        {tracks.map((t) => {
           const Icon = trackIcon[t.id];
           return (
             <div
@@ -17,11 +17,6 @@ export function Tracks() {
                 <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-[var(--color-accent-soft)] text-[var(--color-accent)]">
                   <Icon width={18} height={18} />
                 </span>
-                {i === 0 && (
-                  <span className="rounded-full bg-[var(--color-accent)] px-2 py-0.5 font-mono text-[10px] font-medium uppercase tracking-wider text-white">
-                    Primary
-                  </span>
-                )}
               </div>
               <h3 className="mt-4 text-base font-semibold text-[var(--color-ink)]">
                 {t.label}
