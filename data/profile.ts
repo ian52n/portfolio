@@ -48,7 +48,7 @@ export const profile = {
 
   // --- Bio -----------------------------------------------------------------
   summary:
-    "I'm an iOS engineer who ships. As founder of AI Editor LLC, I designed, built, and published AI Photo Editor to the App Store as sole engineer in under three months — now 800+ users with a zero crash rate across every production release. I also work across the stack: at AssetMark (financial services) I built end-to-end features in React/TypeScript, .NET Core, and PostgreSQL for a platform serving 10,000+ users. Underneath it all is a research-grade quantitative background — an M.S. in Mathematics (4.0 GPA) and a team I led that lifted an LLM evaluation system from 50% to 96% accuracy.",
+    "I'm an iOS engineer who ships. As founder of AI Editor LLC, I designed, built, and published AI Photo Editing to the App Store as sole engineer in under three months — now 800+ users with a zero crash rate across every production release. I also work across the stack: at AssetMark (financial services) I built end-to-end features in React/TypeScript, .NET Core, and PostgreSQL for a platform serving 10,000+ users. Underneath it all is a research-grade quantitative background — an M.S. in Mathematics (4.0 GPA) and a team I led that lifted an LLM evaluation system from 50% to 96% accuracy.",
 
   availability: "Open to iOS, full-stack, and data roles",
 

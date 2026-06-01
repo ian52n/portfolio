@@ -85,7 +85,7 @@ export const projects: Project[] = [
   },
   {
     id: "ai-photo-editing",
-    name: "AI Photo Editor",
+    name: "AI Photo Editing",
     tagline: "A generative-AI photo editor, shipped solo to the App Store.",
     description:
       "An iOS app for editing photos with generative AI — built as the founding product of AI Editor LLC. I took it from concept to App Store publication as sole engineer in under three months. It now has 800+ users and a zero crash rate across every production release.",
