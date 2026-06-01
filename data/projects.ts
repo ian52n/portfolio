@@ -172,7 +172,6 @@ export const projects: Project[] = [
       "Containerized with docker-compose for a one-command local stack",
     ],
     repoUrl: "https://github.com/ian52n/todo-ai-model",
-    isPrivate: true,
     period: "2025",
   },
   {
@@ -188,7 +187,6 @@ export const projects: Project[] = [
       "Verified end-to-end: HTTPS browsing and DNS resolution work through the peer tunnel",
     ],
     repoUrl: "https://github.com/ian52n/vpn-frontend",
-    isPrivate: true,
     period: "2026",
   },
 ];
