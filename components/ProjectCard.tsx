@@ -1,5 +1,6 @@
 import type { Project } from "@/data/projects";
 import { GitHubIcon, ArrowUpRight } from "./icons";
+import { MediaViewer } from "./MediaViewer";
 
 const trackLabel: Record<string, string> = {
   ios: "iOS",
@@ -10,6 +11,7 @@ const trackLabel: Record<string, string> = {
 export function ProjectCard({ project }: { project: Project }) {
   return (
     <article className="group flex h-full flex-col rounded-2xl border bg-[var(--color-surface)] p-6 transition-all duration-300 hover:border-[var(--color-accent)]/40 hover:shadow-[0_8px_30px_-12px_rgba(0,0,0,0.18)]">
+      {project.media && <MediaViewer media={project.media} title={project.name} />}
       <div className="mb-3 flex items-start justify-between gap-3">
         <div className="flex flex-wrap gap-1.5">
           {project.tracks.map((t) => (

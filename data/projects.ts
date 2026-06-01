@@ -1,5 +1,20 @@
 import type { Track } from "./profile";
 
+export type MediaSlide =
+  | { type: "video"; src: string; poster: string; caption?: string }
+  | { type: "image"; src: string; caption?: string };
+
+export interface ProjectMedia {
+  /** Thumbnail shown on the card. */
+  poster: string;
+  /** Affordance label, e.g. "Watch 30s demo" or "9 screenshots". */
+  label: string;
+  /** Frames the card thumbnail correctly. */
+  aspect: "portrait" | "landscape";
+  /** Ordered slides shown in the lightbox. */
+  slides: MediaSlide[];
+}
+
 export interface Project {
   id: string;
   name: string;
@@ -15,6 +30,8 @@ export interface Project {
   highlights: string[];
   repoUrl: string;
   liveUrl?: string;
+  /** Optional screenshots / demo video. */
+  media?: ProjectMedia;
   /** Featured projects render larger / first. */
   featured?: boolean;
   /** Year or range for ordering/context. */
@@ -45,6 +62,22 @@ export const projects: Project[] = [
       "Local-first state: bundled JSON for curated runs, AsyncStorage for saved + generated runs — no accounts, no server state",
     ],
     repoUrl: "https://github.com/ian52n/trace",
+    media: {
+      poster: "/media/trace/demo-poster.jpg",
+      label: "Watch 30s demo",
+      aspect: "portrait",
+      slides: [
+        {
+          type: "video",
+          src: "/media/trace/demo.mp4",
+          poster: "/media/trace/demo-poster.jpg",
+          caption: "30-second demo — discover, generate, and run.",
+        },
+        { type: "image", src: "/media/trace/discover.jpg", caption: "The curated atlas of runs." },
+        { type: "image", src: "/media/trace/generate.jpg", caption: "Drop a pin, pick a distance and a vibe." },
+        { type: "image", src: "/media/trace/detail-generated.jpg", caption: "A generated run, written by Claude." },
+      ],
+    },
     featured: true,
     period: "2026",
   },
@@ -63,6 +96,22 @@ export const projects: Project[] = [
     ],
     repoUrl: "https://github.com/ian52n/ai_photo_editing",
     liveUrl: "https://ai-editor.app",
+    media: {
+      poster: "/media/ai-photo/01-hero.jpg",
+      label: "9 screenshots",
+      aspect: "portrait",
+      slides: [
+        { type: "image", src: "/media/ai-photo/01-hero.jpg", caption: "AI photo editing, made simple." },
+        { type: "image", src: "/media/ai-photo/02-edit-prompt.jpg", caption: "Describe an edit in plain language." },
+        { type: "image", src: "/media/ai-photo/03-result.jpg", caption: "The result — a new outfit, generated on request." },
+        { type: "image", src: "/media/ai-photo/04-ai-mode.jpg", caption: "Pick how hard the AI works: Standard, Genius, Super Genius." },
+        { type: "image", src: "/media/ai-photo/05-prompt-enhancer.jpg", caption: "One-tap style presets." },
+        { type: "image", src: "/media/ai-photo/06-upscale.jpg", caption: "AI upscaling — Real-ESRGAN or fast Lanczos." },
+        { type: "image", src: "/media/ai-photo/07-quick-actions.jpg", caption: "Quick actions: share, save, auto-save." },
+        { type: "image", src: "/media/ai-photo/08-scene.jpg", caption: "Reimagine the whole scene." },
+        { type: "image", src: "/media/ai-photo/09-share.jpg", caption: "Share or save straight to Photos." },
+      ],
+    },
     featured: true,
     period: "2025",
   },
