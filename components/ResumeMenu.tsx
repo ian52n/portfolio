@@ -70,7 +70,7 @@ export function ResumeMenu() {
               <span>
                 <span className="font-medium">{r.label}</span>
                 <span className="block text-xs text-[var(--color-muted)]">
-                  Résumé · PDF
+                  Resume · PDF
                 </span>
               </span>
               <ArrowUpRight width={15} height={15} className="text-[var(--color-muted)]" />
