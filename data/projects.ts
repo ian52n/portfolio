@@ -36,6 +36,8 @@ export interface Project {
   media?: ProjectMedia;
   /** Featured projects render larger / first. */
   featured?: boolean;
+  /** Higher numbers render earlier within featured/non-featured groups. */
+  priority: number;
   /** Year or range for ordering/context. */
   period?: string;
 }
@@ -81,6 +83,7 @@ export const projects: Project[] = [
       ],
     },
     featured: true,
+    priority: 1,
     period: "2026",
   },
   {
@@ -114,6 +117,7 @@ export const projects: Project[] = [
       ],
     },
     featured: true,
+    priority: 2,
     period: "2025",
   },
   {
@@ -121,7 +125,7 @@ export const projects: Project[] = [
     name: "SAIR Math Distillation Challenge",
     tagline: "Engineering LLM 'cheat sheets' for Terence Tao's math reasoning competition.",
     description:
-      "An entry in the SAIR Foundation Mathematics Distillation Challenge (organized by Terence Tao and Damek Davis). The task: build a ≤10 KB plain-text instruction sheet that helps a small open model correctly decide equational implications over magmas, drawn from the 22M-pair Equational Theories Project.",
+      "An entry in the SAIR Foundation Mathematics Distillation Challenge (organized by Terence Tao and Damek Davis). The task: build a 1 KB plain-text instruction sheet that helps a small open model correctly decide equational implications over magmas, drawn from the 22M-pair Equational Theories Project.",
     tracks: ["data"],
     tech: ["Python", "Jupyter", "LLM eval", "Ollama", "Prompt engineering"],
     highlights: [
@@ -131,6 +135,7 @@ export const projects: Project[] = [
     ],
     repoUrl: "https://github.com/ian52n/sair-competition",
     featured: true,
+    priority: 5,
     period: "2026",
   },
   {
@@ -157,6 +162,7 @@ export const projects: Project[] = [
         { type: "image", src: "/media/user-group/ug-attributes.png", caption: "Configurable custom attributes per group." },
       ],
     },
+    priority: 3,
     period: "2025",
   },
   {
@@ -172,6 +178,7 @@ export const projects: Project[] = [
       "Containerized with docker-compose for a one-command local stack",
     ],
     repoUrl: "https://github.com/ian52n/todo-ai-model",
+    priority: 6,
     period: "2025",
   },
   {
@@ -187,6 +194,7 @@ export const projects: Project[] = [
       "Verified end-to-end: HTTPS browsing and DNS resolution work through the peer tunnel",
     ],
     repoUrl: "https://github.com/ian52n/vpn-frontend",
+    priority: 4,
     period: "2026",
   },
 ];
