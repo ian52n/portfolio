@@ -22,11 +22,7 @@ export function Projects() {
       active === "all"
         ? projects
         : projects.filter((p) => p.tracks.includes(active));
-    // Featured first, then by explicit descending priority.
-    return [...list].sort((a, b) => {
-      if (!!b.featured !== !!a.featured) return b.featured ? 1 : -1;
-      return b.priority - a.priority;
-    });
+    return [...list].sort((a, b) => b.priority - a.priority);
   }, [active]);
 
   return (

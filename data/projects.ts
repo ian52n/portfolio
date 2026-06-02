@@ -34,9 +34,7 @@ export interface Project {
   isPrivate?: boolean;
   /** Optional screenshots / demo video. */
   media?: ProjectMedia;
-  /** Featured projects render larger / first. */
-  featured?: boolean;
-  /** Higher numbers render earlier within featured/non-featured groups. */
+  /** Higher numbers render earlier. */
   priority: number;
   /** Year or range for ordering/context. */
   period?: string;
@@ -82,7 +80,6 @@ export const projects: Project[] = [
         { type: "image", src: "/media/trace/detail-generated.jpg", caption: "A generated run, written by Claude." },
       ],
     },
-    featured: true,
     priority: 1,
     period: "2026",
   },
@@ -116,7 +113,6 @@ export const projects: Project[] = [
         { type: "image", src: "/media/ai-photo/07-quick-actions.jpg", caption: "Quick actions: share, save, auto-save." },
       ],
     },
-    featured: true,
     priority: 2,
     period: "2025",
   },
@@ -134,7 +130,6 @@ export const projects: Project[] = [
       "Stage 2 extends the work to machine-verifiable Lean 4 certificates",
     ],
     repoUrl: "https://github.com/ian52n/sair-competition",
-    featured: true,
     priority: 5,
     period: "2026",
   },
