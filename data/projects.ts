@@ -34,7 +34,7 @@ export interface Project {
   isPrivate?: boolean;
   /** Optional screenshots / demo video. */
   media?: ProjectMedia;
-  /** Higher numbers render earlier. */
+  /** Lower numbers render earlier. */
   priority: number;
   /** Year or range for ordering/context. */
   period?: string;

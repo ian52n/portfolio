@@ -22,7 +22,7 @@ export function Projects() {
       active === "all"
         ? projects
         : projects.filter((p) => p.tracks.includes(active));
-    return [...list].sort((a, b) => b.priority - a.priority);
+    return [...list].sort((a, b) => a.priority - b.priority);
   }, [active]);
 
   return (
