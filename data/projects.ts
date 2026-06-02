@@ -47,7 +47,7 @@ export const projects: Project[] = [
     tagline: "An AI-native travel app for runners — runs as destinations, not routes.",
     description:
       "An app where every entry is a run with a story — a curated, Atlas Obscura-voice feed of iconic and hidden runs worldwide, plus a 'generate me a local run' feature: drop a pin, pick a distance and a vibe, and a Cloudflare Worker stitches a real walking loop through nearby POIs (Google Places + Directions) and has Claude write it up. I built it in two stacks: a native SwiftUI version and a cross-platform React Native (Expo) version running on iOS and Android — both implementing the same product spec.",
-    tracks: ["ios", "fullstack", "data"],
+    tracks: ["ios", "data"],
     tech: [
       "Swift",
       "SwiftUI",
