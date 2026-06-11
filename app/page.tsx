@@ -19,7 +19,7 @@ export default function Home() {
     email: `mailto:${profile.email}`,
     jobTitle: profile.title,
     sameAs: [profile.github],
-    knowsAbout: ["iOS development", "Swift", "Full-stack development", "Data science", "LLMs"],
+    knowsAbout: ["AI engineering", "LLMs", "Prompt engineering", "iOS development", "Swift", "Full-stack development"],
   };
 
   return (

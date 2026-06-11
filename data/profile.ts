@@ -3,7 +3,7 @@
  * Sourced from Ian Norris's master profile.
  */
 
-export type Track = "ios" | "fullstack" | "data";
+export type Track = "ai" | "ios" | "fullstack" | "data";
 
 export interface TrackInfo {
   id: Track;
@@ -23,12 +23,12 @@ export interface Stat {
 
 export const profile = {
   name: "Ian Norris",
-  /** Primary positioning — iOS-first per the chosen strategy. */
-  title: "iOS Engineer",
-  /** Secondary framing that keeps full-stack + data in view. */
-  subtitle: "iOS · Full-Stack · Data Science",
+  /** Primary positioning — AI + iOS lead per the chosen strategy. */
+  title: "AI & iOS Engineer",
+  /** Secondary framing that keeps full-stack in view. */
+  subtitle: "AI · iOS · Full-Stack",
   tagline:
-    "I build and ship AI-native products end to end — from an App Store-published SwiftUI app to the full-stack systems and ML behind them.",
+    "I build and ship AI-native products end to end — from an App Store-published SwiftUI app to the full-stack systems and LLM pipelines behind them.",
 
   // --- Contact / links -----------------------------------------------------
   email: "ian52n@gmail.com",
@@ -38,9 +38,11 @@ export const profile = {
   github: "https://github.com/ian52n",
   githubHandle: "ian52n",
   linkedin: "https://www.linkedin.com/in/ian-norris1",
-  resumeUrl: "/Ian-Norris-iOS-Resume.pdf",
-  /** Track-specific resumes, ordered by priority (iOS first). */
+  resumeUrl: "/Ian-Norris-AI-Resume.pdf",
+  /** Track-specific resumes, ordered by priority (AI first). Data Science stays
+   *  available for occasional data roles even though it's no longer a track card. */
   resumes: [
+    { label: "AI Engineer", track: "ai", file: "/Ian-Norris-AI-Resume.pdf" },
     { label: "iOS", track: "ios", file: "/Ian-Norris-iOS-Resume.pdf" },
     { label: "Full-Stack", track: "fullstack", file: "/Ian-Norris-FullStack-Resume.pdf" },
     { label: "Data Science", track: "data", file: "/Ian-Norris-DataScientist-Resume.pdf" },
@@ -48,9 +50,9 @@ export const profile = {
 
   // --- Bio -----------------------------------------------------------------
   summary:
-    "I'm an iOS engineer who ships. As founder of AI Editor LLC, I designed, built, and published AI Photo Editing to the App Store as sole engineer in under three months — now 800+ users with a zero crash rate across every production release. I also work across the stack: at AssetMark (financial services) I built end-to-end features in React/TypeScript, .NET Core, and PostgreSQL for a platform serving 10,000+ users. Underneath it all is a research-grade quantitative background — an M.S. in Mathematics (4.0 GPA) and a team I led that lifted an LLM evaluation system from 50% to 96% accuracy.",
+    "I'm an AI and iOS engineer who ships. As founder of AI Editor LLC, I designed, built, and published AI Photo Editing — a generative-AI photo editor — to the App Store as sole engineer in under three months, now 800+ users with a zero crash rate across every production release. My AI work runs deeper than API calls: a server-side Claude pipeline in Trace that turns a dropped pin into a written run, and a 5-person team I led that lifted an LLM evaluation system from 50% to 96% accuracy. I also work across the stack — at AssetMark (financial services) I built end-to-end features in React/TypeScript, .NET Core, and PostgreSQL for a platform serving 10,000+ users — all on a research-grade quantitative foundation: an M.S. in Mathematics (4.0 GPA).",
 
-  availability: "Open to iOS, full-stack, and data roles",
+  availability: "Open to AI, iOS, and full-stack roles",
 
   stats: [
     { value: "800+", label: "users on my shipped iOS app" },
@@ -61,6 +63,14 @@ export const profile = {
 } as const;
 
 export const tracks: TrackInfo[] = [
+  {
+    id: "ai",
+    label: "AI Engineering",
+    headline: "Applied AI that ships to real users",
+    blurb:
+      "A generative-AI photo editor live on the App Store, plus Trace's server-side Claude pipeline that turns a dropped pin into a written run. Led a 5-person team that lifted an LLM evaluation system from 50% to 96% accuracy — on an M.S. Mathematics (4.0) foundation.",
+    stack: ["Claude API", "OpenAI API", "Prompt engineering", "LLM evaluation", "PyTorch", "Cloudflare Workers"],
+  },
   {
     id: "ios",
     label: "iOS Development",
@@ -76,13 +86,5 @@ export const tracks: TrackInfo[] = [
     blurb:
       "React/TypeScript frontends on .NET Core and PostgreSQL backends, serving 10,000+ users in production. RBAC, REST APIs, Kafka event streaming, and 85% test coverage.",
     stack: ["React", "TypeScript", ".NET Core", "Entity Framework", "PostgreSQL", "Kafka"],
-  },
-  {
-    id: "data",
-    label: "Data Science",
-    headline: "Mathematics, models, and measurable accuracy",
-    blurb:
-      "M.S. Mathematics (4.0). Led a 5-person team that raised an LLM evaluation system from 50% to 96% accuracy, plus ML forecasting, HPC numerics, and a published research paper.",
-    stack: ["Python", "PyTorch", "NumPy", "Pandas", "LLM evaluation", "HPC"],
   },
 ];

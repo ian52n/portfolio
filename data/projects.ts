@@ -47,7 +47,7 @@ export const projects: Project[] = [
     tagline: "An AI-native travel app for runners — runs as destinations, not routes.",
     description:
       "An app where every entry is a run with a story — a curated, Atlas Obscura-voice feed of iconic and hidden runs worldwide, plus a 'generate me a local run' feature: drop a pin, pick a distance and a vibe, and a Cloudflare Worker stitches a real walking loop through nearby POIs (Google Places + Directions) and has Claude write it up. I built it in two stacks: a native SwiftUI version and a cross-platform React Native (Expo) version running on iOS and Android — both implementing the same product spec.",
-    tracks: ["ios", "data"],
+    tracks: ["ai", "ios"],
     tech: [
       "Swift",
       "SwiftUI",
@@ -89,7 +89,7 @@ export const projects: Project[] = [
     tagline: "A generative-AI photo editor, shipped solo to the App Store.",
     description:
       "An iOS app for editing photos with generative AI — built as the founding product of AI Editor LLC. I took it from concept to App Store publication as sole engineer in under three months. It now has 800+ users and a zero crash rate across every production release.",
-    tracks: ["ios"],
+    tracks: ["ai", "ios"],
     tech: ["Swift", "SwiftUI", "Swift Concurrency", "DeepAI API", "On-device ML", "CI/CD"],
     highlights: [
       "800+ users · zero crash rate · sub-6s cold start · ≤500 MB peak memory",
@@ -122,7 +122,7 @@ export const projects: Project[] = [
     tagline: "Engineering LLM 'cheat sheets' for Terence Tao's math reasoning competition.",
     description:
       "An entry in the SAIR Foundation Mathematics Distillation Challenge (organized by Terence Tao and Damek Davis). The task: build a 1 KB plain-text instruction sheet that helps a small open model correctly decide equational implications over magmas, drawn from the 22M-pair Equational Theories Project.",
-    tracks: ["data"],
+    tracks: ["ai"],
     tech: ["Python", "Jupyter", "LLM eval", "Ollama", "Prompt engineering"],
     highlights: [
       "Data-driven strategy: exploited structural priors (≈63% FALSE base rate, ~32% singleton laws) to push accuracy",
@@ -166,7 +166,7 @@ export const projects: Project[] = [
     tagline: "Natural-language calendar management that compiles chat into SQL.",
     description:
       "An AI calendar assistant that turns natural-language requests into CRUD operations on a PostgreSQL store. A Streamlit chat UI sits over an LLM-driven pipeline that generates and runs SQL against calendar entries.",
-    tracks: ["fullstack", "data"],
+    tracks: ["ai", "fullstack"],
     tech: ["Python", "Streamlit", "Ollama", "OpenAI API", "PostgreSQL", "Docker"],
     highlights: [
       "NL → SQL pipeline with separate query-processing and SQL-generation stages",

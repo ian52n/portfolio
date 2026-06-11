@@ -9,9 +9,9 @@ type Filter = "all" | Track;
 
 const filters: { id: Filter; label: string }[] = [
   { id: "all", label: "All" },
+  { id: "ai", label: "AI" },
   { id: "ios", label: "iOS" },
   { id: "fullstack", label: "Full-Stack" },
-  { id: "data", label: "Data Science" },
 ];
 
 export function Projects() {
@@ -35,7 +35,7 @@ export function Projects() {
           Projects
         </h2>
         <p className="mt-4 text-base leading-relaxed text-[var(--color-muted)]">
-          Shipping products across mobile, web, and applied AI. Filter by the
+          Shipping products across applied AI, mobile, and the web. Filter by the
           kind of work you care about.
         </p>
       </header>

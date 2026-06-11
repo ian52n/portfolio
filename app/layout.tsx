@@ -26,10 +26,12 @@ export const metadata: Metadata = {
   description: profile.tagline,
   keywords: [
     "Ian Norris",
+    "AI engineer",
+    "LLM engineer",
+    "applied AI",
     "iOS engineer",
     "Swift developer",
     "full-stack developer",
-    "data scientist",
     "SwiftUI",
     "React Native",
     "portfolio",

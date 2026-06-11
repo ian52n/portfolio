@@ -55,6 +55,15 @@ export function CodeIcon(props: IconProps) {
   );
 }
 
+export function SparkleIcon(props: IconProps) {
+  return (
+    <svg {...base} {...props}>
+      <path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9L12 3Z" />
+      <path d="M18 15l.8 2.2L21 18l-2.2.8L18 21l-.8-2.2L15 18l2.2-.8L18 15Z" />
+    </svg>
+  );
+}
+
 export function PhoneIcon(props: IconProps) {
   return (
     <svg {...base} {...props}>
@@ -134,6 +143,7 @@ export function GalleryIcon(props: IconProps) {
 }
 
 export const trackIcon = {
+  ai: SparkleIcon,
   ios: PhoneIcon,
   fullstack: StackIcon,
   data: ChartIcon,
