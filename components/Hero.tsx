@@ -11,11 +11,6 @@ export function Hero() {
       />
       <div className="mx-auto w-full max-w-5xl px-6 pb-20 sm:pb-28">
         <div className="animate-rise">
-          <p className="mb-5 inline-flex items-center gap-2 rounded-full border bg-[var(--color-surface)] px-3 py-1 font-mono text-xs text-[var(--color-muted)]">
-            <span className="h-1.5 w-1.5 rounded-full bg-green-500" />
-            {profile.availability}
-          </p>
-
           <h1 className="max-w-3xl text-4xl font-semibold leading-[1.08] tracking-tight text-[var(--color-ink)] sm:text-6xl">
             {profile.name}.
             <br />

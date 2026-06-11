@@ -3,6 +3,7 @@ import { GitHubIcon, ArrowUpRight, LockIcon } from "./icons";
 import { MediaViewer } from "./MediaViewer";
 
 const trackLabel: Record<string, string> = {
+  ai: "AI",
   ios: "iOS",
   fullstack: "Full-Stack",
   data: "Data Science",
@@ -17,7 +18,7 @@ export function ProjectCard({ project }: { project: Project }) {
           {project.tracks.map((t) => (
             <span
               key={t}
-              className="rounded-full bg-[var(--color-accent-soft)] px-2.5 py-0.5 font-mono text-[10px] font-medium uppercase tracking-wider text-[var(--color-accent-ink)]"
+              className="rounded-full bg-[var(--color-accent-soft)] px-2.5 py-0.5 font-mono text-[10px] font-medium tracking-wider text-[var(--color-accent-ink)]"
             >
               {trackLabel[t]}
             </span>
