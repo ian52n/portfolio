@@ -4,6 +4,10 @@ import { ResumeMenu } from "./ResumeMenu";
 
 export function Contact() {
   const showLinkedIn = !profile.linkedin.startsWith("FROM MASTER");
+  // Lowercase only the first letter so it reads "I'm open to…" while keeping
+  // acronyms like AI and iOS intact.
+  const availability =
+    profile.availability.charAt(0).toLowerCase() + profile.availability.slice(1);
 
   return (
     <section id="contact" className="scroll-mt-20 py-20 sm:py-28">
@@ -16,7 +20,7 @@ export function Contact() {
             Let&apos;s build something.
           </h2>
           <p className="mt-4 max-w-xl text-base leading-relaxed text-[var(--color-muted)]">
-            I&apos;m {profile.availability.toLowerCase()}. The fastest way to
+            I&apos;m {availability}. The fastest way to
             reach me is email — happy to share more work, a resume, or hop on a
             call.
           </p>
