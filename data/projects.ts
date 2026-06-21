@@ -117,6 +117,24 @@ export const projects: Project[] = [
     period: "2025",
   },
   {
+    id: "llm-eval",
+    name: "LLM Evaluation System",
+    tagline: "Systematic evaluation that took an LLM system from 50% to 96% accuracy.",
+    description:
+      "An evaluation harness for an LLM-driven system, built during my M.S. at NAU. I led a 5-person team to define the evaluation methodology and metrics, then iterated on prompts and model selection against a measured benchmark.",
+    tracks: ["ai"],
+    tech: ["Python", "LLM evaluation", "Prompt engineering"],
+    highlights: [
+      "Led a 5-person team from problem framing through delivery",
+      "Raised accuracy from 50% to 96% through systematic evaluation and prompt iteration",
+      "Drove model-selection and prompt-engineering decisions from measured results",
+    ],
+    repoUrl: "https://github.com/ian52n",
+    isPrivate: true,
+    priority: 3,
+    period: "2025",
+  },
+  {
     id: "sair-competition",
     name: "SAIR Math Distillation Challenge",
     tagline: "Engineering LLM 'cheat sheets' for Terence Tao's math reasoning competition.",
@@ -130,7 +148,7 @@ export const projects: Project[] = [
       "Stage 2 extends the work to machine-verifiable Lean 4 certificates",
     ],
     repoUrl: "https://github.com/ian52n/sair-competition",
-    priority: 5,
+    priority: 6,
     period: "2026",
   },
   {
@@ -157,23 +175,7 @@ export const projects: Project[] = [
         { type: "image", src: "/media/user-group/ug-attributes.png", caption: "Configurable custom attributes per group." },
       ],
     },
-    priority: 3,
-    period: "2025",
-  },
-  {
-    id: "todo-ai-model",
-    name: "Todo AI — Calendar Assistant",
-    tagline: "Natural-language calendar management that compiles chat into SQL.",
-    description:
-      "An AI calendar assistant that turns natural-language requests into CRUD operations on a PostgreSQL store. A Streamlit chat UI sits over an LLM-driven pipeline that generates and runs SQL against calendar entries.",
-    tracks: ["ai", "fullstack"],
-    tech: ["Python", "Streamlit", "Ollama", "OpenAI API", "PostgreSQL", "Docker"],
-    highlights: [
-      "NL → SQL pipeline with separate query-processing and SQL-generation stages",
-      "Containerized with docker-compose for a one-command local stack",
-    ],
-    repoUrl: "https://github.com/ian52n/todo-ai-model",
-    priority: 6,
+    priority: 4,
     period: "2025",
   },
   {
@@ -189,7 +191,7 @@ export const projects: Project[] = [
       "Verified end-to-end: HTTPS browsing and DNS resolution work through the peer tunnel",
     ],
     repoUrl: "https://github.com/ian52n/vpn-frontend",
-    priority: 4,
+    priority: 5,
     period: "2026",
   },
 ];

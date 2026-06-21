@@ -55,6 +55,15 @@ export const experience: ExperienceItem[] = [
       "Built Python backend services and API-driven workflows (Google APIs); refactored legacy systems and introduced automated testing.",
     ],
   },
+  {
+    role: "Graduate Teaching Assistant",
+    org: "Northern Arizona University",
+    location: "Flagstaff, AZ · Mathematics",
+    period: "2024 – 2026",
+    bullets: [
+      "Taught and mentored undergraduate mathematics students, and mentored student teams in the DataFest data-science competition.",
+    ],
+  },
 ];
 
 export const education: EducationItem[] = [
@@ -64,9 +73,7 @@ export const education: EducationItem[] = [
     location: "Flagstaff, AZ",
     period: "May 2026 · GPA 4.0",
     details: [
-      "Led a 5-person team designing an LLM evaluation system; improved model accuracy from 50% to 96%.",
-      "Research in ML-based influenza forecasting and validated numerics on NAU's HPC cluster (C++/Julia).",
-      "Graduate Teaching Assistant (2024–2026); DataFest competition mentor.",
+      "Research in ML-based influenza forecasting; validated numerics on NAU's HPC cluster (C++/Julia).",
     ],
   },
   {
