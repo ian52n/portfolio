@@ -84,7 +84,7 @@ export const tracks: TrackInfo[] = [
     label: "Full-Stack",
     headline: "From the UI down to the database",
     blurb:
-      "React/TypeScript frontends on .NET Core and PostgreSQL backends, serving 10,000+ users in production. RBAC, REST APIs, Kafka event streaming, and 85% test coverage.",
-    stack: ["React", "TypeScript", ".NET Core", "Entity Framework", "PostgreSQL", "Kafka"],
+      "React/TypeScript frontends on .NET Core and PostgreSQL backends, serving 10,000+ users in production. RBAC, REST APIs, and 85% test coverage.",
+    stack: ["React", "TypeScript", ".NET Core", "Entity Framework", "PostgreSQL"],
   },
 ];

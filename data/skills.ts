@@ -19,7 +19,7 @@ export const skillGroups: SkillGroup[] = [
   },
   {
     category: "Web & Backend",
-    skills: ["React", ".NET Core", "ASP.NET MVC", "Entity Framework", "Node.js", "REST APIs", "PostgreSQL", "Cloudflare Workers", "Kafka"],
+    skills: ["React", ".NET Core", "ASP.NET MVC", "Entity Framework", "Node.js", "REST APIs", "PostgreSQL", "Cloudflare Workers"],
   },
   {
     category: "AI & Data Science",

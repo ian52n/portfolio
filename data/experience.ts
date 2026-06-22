@@ -34,7 +34,7 @@ export const experience: ExperienceItem[] = [
     period: "2025",
     bullets: [
       "Built end-to-end features across React/TypeScript, .NET Core (C#) with Entity Framework, and PostgreSQL for a platform serving 10,000+ users, at 85% unit-test coverage.",
-      "Designed a scalable RBAC permission schema and shipped a legacy-integration layer (iframe + postMessage) bridging ASP.NET and new .NET Core/React apps; used Kafka for inter-service event streaming.",
+      "Designed a scalable RBAC permission schema and shipped a legacy-integration layer (iframe + postMessage) bridging ASP.NET and new .NET Core/React apps.",
     ],
   },
   {
