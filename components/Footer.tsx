@@ -1,4 +1,5 @@
 import { profile } from "@/data/profile";
+import { GitHubIcon } from "./icons";
 
 export function Footer() {
   return (
@@ -7,9 +8,15 @@ export function Footer() {
         <p className="font-mono text-xs text-[var(--color-muted)]">
           © {new Date().getFullYear()} {profile.name}
         </p>
-        <p className="font-mono text-xs text-[var(--color-muted)]">
-          Built with Next.js · Deployed on Vercel
-        </p>
+        <a
+          href="https://github.com/ian52n/portfolio"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-1.5 font-mono text-xs text-[var(--color-muted)] transition-colors hover:text-[var(--color-ink)]"
+        >
+          <GitHubIcon width={14} height={14} />
+          Source
+        </a>
       </div>
     </footer>
   );
