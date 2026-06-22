@@ -72,9 +72,6 @@ export const education: EducationItem[] = [
     school: "Northern Arizona University",
     location: "Flagstaff, AZ",
     period: "May 2026 · GPA 4.0",
-    details: [
-      "Research in ML-based influenza forecasting; validated numerics on NAU's HPC cluster (C++/Julia).",
-    ],
   },
   {
     degree: "B.S. Mathematics",

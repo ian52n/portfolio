@@ -28,7 +28,7 @@ export const profile = {
   /** Secondary framing that keeps full-stack in view. */
   subtitle: "AI · iOS · Full-Stack",
   tagline:
-    "I build AI features that ship to real users — not demos. From a generative-AI iOS app live on the App Store to the LLM pipelines and full-stack systems behind it.",
+    "I build AI features that ship to real users — not demos. I've shipped a generative-AI app to the App Store and built the LLM pipelines and full-stack systems that power it.",
 
   // --- Contact / links -----------------------------------------------------
   email: "ian52n@gmail.com",
